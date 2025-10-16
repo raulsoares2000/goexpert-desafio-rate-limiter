@@ -21,7 +21,7 @@ O sistema é capaz de limitar o número de requisições com base no endereço I
 * **Banco de Dados:** Redis
 * **Containerização:** Docker & Docker Compose
 * **Roteador HTTP:** [Chi](https://github.com/go-chi/chi)
-* **Gerenciamento de Configuração:** [GodotEnv](https://github.com/joho/godotenv)
+* **Gerenciamento de Configuração:** [Viper](https://github.com/spf13/viper)
 
 ## 🚀 Como Executar
 
@@ -127,7 +127,7 @@ Estes testes validam o fluxo completo da aplicação, incluindo a integração c
 
 1. Inicie o ambiente de teste:
 ```bash
-docker-compose -f docker-compose.test.yml up -d
+docker-compose -f docker-compose.test.yaml up -d
 ```
 
 2. Execute os testes:
@@ -137,7 +137,7 @@ go test ./...
 
 3. Desligue o ambiente de teste:
 ```bash
-docker-compose -f docker-compose.test.yml down
+docker-compose -f docker-compose.test.yaml down
 ```
 
 ## 📂 Estrutura do Projeto
