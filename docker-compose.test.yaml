@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  redis-test:
+    image: redis:latest
+    container_name: redis-test
+    command: --port 6380 # Executa o Redis em uma porta interna diferente
+    ports:
+      # Mapeia a porta 6380 do host para a 6380 do container.
+      # Usamos uma porta diferente para não conflitar com o ambiente de dev.
+      - "6380:6380"
